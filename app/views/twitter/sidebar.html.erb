@@ -1,0 +1,36 @@
+<div style="width:100%; display:block; margin-left: auto; margin-right: auto">
+  <div style="float:left">
+    <!--some bla bla simulating the main page-->
+    <h1>Twitter#test</h1>
+    <p>Find me in app/views/twitter/test.html.erb</p>
+    <h1>First experiment with erb</h1>
+    <p>Loop from 0 to 5:
+    <% (0..5).each do |i| %>
+    <%= "#{i}, " %>
+    <% end %>
+    </p>
+    <p>
+    The current time is
+    <%= @current_time %>
+    </p>
+  </div>
+  <% unless Rails.application.secrets.twitter_required == false %>
+    <div style="float:right; width:20%">
+      <p>
+        <!--<img src="app/views/twitter/img/twitter.jpg" width="92" height="120" ></img>-->
+      <h3>You see the tweets of <%= @twitter_name %>*</h3>
+      <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p>
+       <p style="font-size:10px">*To prevent leakage no links are displayed. For more information visit the twitter of <%= @twitter_name %></p>
+      </p>
+      <p>
+      <% @tweets.each do |e| %>
+        <p class=tweet>
+          <%= "#{e.text} " %>
+        </p>
+      <% end %>
+      <!--<%= @tweets %>-->
+      </p>
+    </div>
+  <% end %>
+  <%= render "footer" , :start_year => '2020' %>
+</div>
