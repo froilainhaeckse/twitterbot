@@ -14,7 +14,7 @@
     <%= @current_time %>
     </p>
   </div>
-  <% unless Rails.application.secrets.twitter_required == false %>
+  <% unless Rails.application.secrets.twitter['enabled'] == false %>
     <div style="float:right; width:20%">
       <p>
         <!--<img src="app/views/twitter/img/twitter.jpg" width="92" height="120" ></img>-->
