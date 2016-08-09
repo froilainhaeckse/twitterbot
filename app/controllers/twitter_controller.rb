@@ -7,9 +7,9 @@ class TwitterController < ApplicationController
     @current_time = Time.now
     # only do when twitter_credentials are set as required
     unless Rails.application.secrets.twitter['enabled'] == false
-      if @num_followers == nil
-        @num_followers = twitter_client.user.followers_count
-      end
+      # if @num_followers == nil
+      #   @num_followers = twitter_client.user.followers_count
+      # end
       # have all the tweets in an array
       @tweets = []
       @twitter_name = twitter_client.user.screen_name
