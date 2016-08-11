@@ -14,18 +14,25 @@
   bottom: 0;
   overflow: auto;
   width: 250px;
+
 }
 .twitter_header {
   padding-top: 8px;
+  height: 30px;
   font-size: 15px ;
   font-family: Verdana ;
+  text-align: center;
 }
+// .twitter.content {
+//   text-align: center;
+// }
 .tweets {
   border-bottom-style: solid;
   display: inline;
   height: 32px;
   width: 100%;
   position: absolute;
+  // text-align: center;
 }
 #tweets_pic {
   display: block;
@@ -42,8 +49,6 @@
   height: 100%;
 }
 .tweet_text {
-  // position: static;
-  // padding-left: 8px;
   padding-left: 8px;
   padding-top: 45px;
 }
@@ -51,4 +56,7 @@
   padding-left: 8px;
   padding-top: 4px;
   font-size: 12px ;
+}
+.twitter_footer {
+  padding-top: 8px;
 }
