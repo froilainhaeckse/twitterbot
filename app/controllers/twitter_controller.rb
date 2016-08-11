@@ -12,7 +12,12 @@ class TwitterController < ApplicationController
       # end
       # have all the tweets in an array
       @tweets = []
-      @twitter_name = "blabla"# twitter_client.user.screen_name # how often can this be asked for?
+      unless @twitter_screen_name != nil
+        @twitter_screen_name = twitter_client.user.screen_name # how often can this be asked for?
+      end
+      unless @twitter_name != nil
+        @twitter_name = twitter_client.user.name # how often can this be asked for?
+      end
       # differ between tweets and retweets! do not show retweets! retweets start with "RT"
       @tweets = twitter_client.user_timeline.select{ |tweet| tweet.text.start_with?('RT')==false}
       @tweet_time = "tweeted on" # should say retweeted on for retweet
