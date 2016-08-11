@@ -23,7 +23,8 @@
         <div class="twitter_header">
           Tweets by @<%= @twitter_screen_name %></p>
         </div>
-      <!-- <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p> -->
+      <p><%= @myCache %></p>
+      <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p>
       <% @tweets.each do |e| %>
         <div class=tweets>
           <div>
@@ -37,8 +38,7 @@
           <%= " #{e.text}" %>
         </div>
         <div class=text_date>
-          <%= @tweet_time %>
-          <%= " #{e.created_at}" %>
+          <%= @tweet_time %> <% t = e.created_at%> <%="#{t.strftime("%m/%d/%Y")}"%>
         </div>
       <% end %>
         <div class="twitter_footer">

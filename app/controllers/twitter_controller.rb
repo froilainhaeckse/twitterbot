@@ -7,6 +7,8 @@ class TwitterController < ApplicationController
     @current_time = Time.now
     # only do when twitter_credentials are set as required
     unless Rails.application.secrets.twitter['enabled'] == false
+      # create hash-cache, hash with timestamp; key + value
+      # @myCache = {'Time.now' ==> 'twitter_client.user.followers_count'}
       # if @num_followers == nil
       #   @num_followers = twitter_client.user.followers_count
       # end
