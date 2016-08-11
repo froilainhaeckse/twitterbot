@@ -1,36 +1,46 @@
-<div class=mainmain>
   <div class=main>
-    <!--some bla bla simulating the main page-->
-    <h1>Twitter#test</h1>
-    <p>Find me in app/views/twitter/test.html.erb</p>
-    <h1>First experiment with erb</h1>
-    <p>Loop from 0 to 5:
-    <% (0..5).each do |i| %>
-    <%= "#{i}, " %>
-    <% end %>
-    </p>
-    <p>
-    The current time is
-    <%= @current_time %>
-    </p>
-    <%= render "footer" , :start_year => '2020' %>
+    <div>
+      <!--some bla bla simulating the main page-->
+      <h1>Twitter#test</h1>
+      <p>Find me in app/views/twitter/test.html.erb</p>
+      <h1>First experiment with erb</h1>
+      <p>Loop from 0 to 5:
+      <% (0..5).each do |i| %>
+      <%= "#{i}, " %>
+      <% end %>
+      </p>
+      <p>
+      The current time is
+      <%= @current_time %>
+      </p>
+    </div>
+    <div class=footer>
+      <%= render "footer" , :start_year => '2020' %>
+    </div>
   </div>
   <% unless Rails.application.secrets.twitter['enabled'] == false %>
     <div class=twitter>
-      <p>
-        <!--<img src="app/views/twitter/img/twitter.jpg" width="92" height="120" ></img>-->
-      <h3>You see the tweets of <%= @twitter_name %>*</h3>
-      <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p>
-       <p>*To prevent leakage no links are displayed. For more information visit the twitter of <%= @twitter_name %></p>
-      </p>
-      <p>
+      <div class="twitter_header">Tweets by @<%= @twitter_name %></p>
+      <!-- <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p> -->
       <% @tweets.each do |e| %>
-        <p>
-          <%= "#{e.text} " %>
-        </p>
+        <div class=tweets>
+          <div>
+            <img id="tweets_pic" src="assets/twitter.jpg"></img>
+          </div>
+          <div class=tweets_name>
+            <%= @twitter_name %>
+          </div>
+        </div>
+        <div class=tweet_text>
+          <%= " #{e.text}" %>
+        </div>
+        <div class=text_date>
+          <%= @tweet_time %>
+          <%= " #{e.created_at}" %>
+        </div>
       <% end %>
+      </div>
       <!--<%= @tweets %>-->
-      </p>
+      <p>To prevent leakage no links are displayed. For more information visit the twitter of @<%= @twitter_name %>.</p>
     </div>
   <% end %>
-</div>

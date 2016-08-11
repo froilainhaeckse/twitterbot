@@ -1,34 +1,54 @@
 // Place all the styles related to the Twitter controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-div {
-// style="width:100%; display:block; margin-left: auto; margin-right: auto"
-// style="float:left"
-// style="float:right; width:20%"
-// style="font-size:10px"
-}
-.mainmain {
-  display: inline;
-  box-sizing: border-box;
-// style="width:100%; display:block; margin-left: auto; margin-right: auto"
-// style="float:left"
-// style="float:right; "
-// style="font-size:10px"
-}
-.main {
-  width:80%;
-  box-sizing: border-box;
-// style="width:100%; display:block; margin-left: auto; margin-right: auto"
-// style="float:left"
-// style="float:right; "
-// style="font-size:10px"
+.footer {
+  position: fixed;
+  overflow : hidden;
+  bottom: 0px;
+  height: 45px;
 }
 .twitter {
-  float:right;
-  width:20%;
-  box-sizing: border-box;
-// style="width:100%; display:block; margin-left: auto; margin-right: auto"
-// style="float:left"
-// style="float:right; width:20%"
-// style="font-size:10px"
+  position: fixed;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  overflow: auto;
+  width: 250px;
+}
+.twitter_header {
+  padding-top: 8px;
+  font-size: 15px ;
+  font-family: Verdana ;
+}
+.tweets {
+  border-bottom-style: solid;
+  display: inline;
+  height: 32px;
+  width: 100%;
+  position: absolute;
+}
+#tweets_pic {
+  display: block;
+  float: left;
+  width: 28px;
+  height: 33px;
+  padding-left: 8px;
+  padding-top: 8px;
+  // background: hsl(0, 0%, 30%);
+}
+.tweets_name {
+  padding-left: 45px;
+  padding-top: 8px;
+  height: 100%;
+}
+.tweet_text {
+  // position: static;
+  // padding-left: 8px;
+  padding-left: 8px;
+  padding-top: 45px;
+}
+.text_date {
+  padding-left: 8px;
+  padding-top: 4px;
+  font-size: 12px ;
 }
