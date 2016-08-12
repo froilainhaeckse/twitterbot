@@ -9,10 +9,6 @@
       <%= "#{i}, " %>
       <% end %>
       </p>
-      <p>
-      The current time is
-      <%= @current_time %>
-      </p>
     </div>
     <div class=footer>
       <%= render "footer" , :start_year => '2020' %>
@@ -23,8 +19,7 @@
         <div class="twitter_header">
           Tweets by @<%= @twitter_screen_name %></p>
         </div>
-      <p><%= @myCache %></p>
-      <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p>
+      <!-- <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p> -->
       <% @tweets.each do |e| %>
         <div class=tweets>
           <div>
