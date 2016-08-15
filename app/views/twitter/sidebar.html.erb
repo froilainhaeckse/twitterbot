@@ -23,18 +23,19 @@
       <% @tweets.each do |e| %>
         <div class=tweets>
           <div>
-            <img id="tweets_pic" src="assets/twitter.jpg"></img>
+            <img class="tweets_pic" src="assets/twitter.jpg"></img>
           </div>
           <div class=tweets_name>
             <%= @twitter_name %>
           </div>
+          <div class=tweet_text>
+            <%= " #{e.text}" %>
+          </div>
+          <div class=text_date>
+            <%= @tweet_time %> <% t = e.created_at%> <%="#{t.strftime("%m/%d/%Y")}"%>
+          </div>
         </div>
-        <div class=tweet_text>
-          <%= " #{e.text}" %>
-        </div>
-        <div class=text_date>
-          <%= @tweet_time %> <% t = e.created_at%> <%="#{t.strftime("%m/%d/%Y")}"%>
-        </div>
+
       <% end %>
         <div class="twitter_footer">
           To prevent leakage no links are displayed. For more information visit @<%= @twitter_name %> on twitter.com.</p>

@@ -14,27 +14,25 @@
   bottom: 0;
   overflow: auto;
   width: 250px;
-
 }
 .twitter_header {
   padding-top: 8px;
   height: 30px;
-  font-size: 15px ;
-  font-family: Verdana ;
+  font-size: 20px ;
+  // font-family: Verdana, sans-serif ;
   text-align: center;
 }
 // .twitter.content {
 //   text-align: center;
 // }
 .tweets {
-  border-bottom-style: solid;
-  display: inline;
-  height: 32px;
-  width: 100%;
-  position: absolute;
+  // display: inline;
+  // height: 32px;
+  // width: 100%;
+  // position: absolute;
   // text-align: center;
 }
-#tweets_pic {
+.tweets_pic {
   display: block;
   float: left;
   width: 28px;
@@ -46,11 +44,11 @@
 .tweets_name {
   padding-left: 45px;
   padding-top: 8px;
-  height: 100%;
+  border-bottom-style: solid;
 }
 .tweet_text {
   padding-left: 8px;
-  padding-top: 45px;
+  padding-top: 10px;
 }
 .text_date {
   padding-left: 8px;
