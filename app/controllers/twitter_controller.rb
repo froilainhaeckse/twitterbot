@@ -4,8 +4,8 @@ class TwitterController < ApplicationController
   end
   def sidebar
     unless Rails.application.secrets.twitter['enabled'] == false
-      @twitter_screen_name = load_from_cache($twitter_screen_name, "screen_name")
-      @twitter_name = load_from_cache($twitter_name, "name")
+      @twitter_screen_name = load_from_cache(twitter_screen_name, "screen_name")
+      @twitter_name = load_from_cache(twitter_name, "name")
 
       # differ between tweets and retweets! do not show retweets! retweets start with "RT"
       @tweets = twitter_client.user_timeline.select{ |tweet| tweet.text.start_with?('RT')==false}

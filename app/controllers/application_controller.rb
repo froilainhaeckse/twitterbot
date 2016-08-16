@@ -18,9 +18,9 @@ class ApplicationController < ActionController::Base
     twitter_screen_name
   end
 
-  # define global variables  
-  $twitter_screen_name  = [nil, nil]
-  $twitter_name  = [nil, nil]
-  $num_followers = [nil, nil]
+  def twitter_name
+    twitter_name  = [nil, nil]
+    twitter_name
+  end
 
 end
