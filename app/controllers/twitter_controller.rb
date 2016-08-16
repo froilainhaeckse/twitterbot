@@ -9,10 +9,11 @@ class TwitterController < ApplicationController
 
       # differ between tweets and retweets! do not show retweets! retweets start with "RT"
       @tweets = twitter_client.user_timeline.select{ |tweet| tweet.text.start_with?('RT')==false}
-      @tweet_time = "tweeted on" # should say retweeted on for retweet
+      @tweet_time = "tweeted on"
     end
   end
 
+  # cache because of twitter API rate limit
   def load_from_cache(tuple, twitter_user_property)
     if tuple[0] == nil
       update_time_based_cache(tuple, twitter_user_property)
@@ -24,6 +25,7 @@ class TwitterController < ApplicationController
     tuple[1]
   end
 
+  # talk to twitter API
   def update_time_based_cache(tuple, twitter_user_property)
     tuple[0] = Time.now
     tuple[1] = twitter_client.user[twitter_user_property]
