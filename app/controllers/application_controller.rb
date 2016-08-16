@@ -12,15 +12,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  #get rid of the global variables?
-  def twitter_screen_name
-    twitter_screen_name  = [nil, nil]
-    twitter_screen_name
-  end
-
-  # define global variables  
-  $twitter_screen_name  = [nil, nil]
-  $twitter_name  = [nil, nil]
-  $num_followers = [nil, nil]
-
 end
