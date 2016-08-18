@@ -10,7 +10,7 @@ class TwitterController < ApplicationController
       @twitter_name = user_info[:name]
 
       # ***cashing also tweets!
-      @tweets = twitter_client.user_timeline.select{ |tweet| tweet.text.start_with?('RT')==false}
+      @tweets = twitter_client.user_timeline.select{ |tweet| tweet.text.start_with?('RT','@')==false}
       @tweet_time = "tweeted on"
     end
   end
