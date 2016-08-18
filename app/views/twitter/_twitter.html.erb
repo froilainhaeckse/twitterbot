@@ -1,7 +1,7 @@
 <% unless Rails.application.secrets.twitter['enabled'] == false %>
   <div class=twitter>
       <div class="twitter_header">
-        Tweets by @<%= @filee %></p>
+        Tweets by @<%= @twitter_screen_name %></p>
       </div>
     <!-- <p><a href="/followers"> You have <%= @num_followers %> followers.</a></p> -->
     <% @tweets.each do |e| %>
