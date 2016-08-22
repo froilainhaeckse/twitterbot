@@ -25,7 +25,12 @@
 // .twitter.content {
 //   text-align: center;
 // }
+.tweets:hover {
+    background-color: #ccf2ff;
+  }
 .tweets {
+  border-bottom-style: solid;
+  border-color: #bfbfbf;
   // display: inline;
   // height: 32px;
   // width: 100%;
@@ -43,15 +48,16 @@
 }
 .tweets_name {
   padding-left: 45px;
-  padding-top: 8px;
-  border-bottom-style: solid;
+  padding-top: 16px;
+  // border-bottom-style: solid;
+  // border-color: #00bfff;
 }
 .tweet_text {
   padding-left: 8px;
   padding-top: 15px;
 }
 .text_date {
-  padding-left: 8px;
+  text-align: right;
   padding-top: 4px;
   font-size: 12px ;
 }
